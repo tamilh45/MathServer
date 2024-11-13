@@ -1,6 +1,5 @@
 # Ex.05 Design a Website for Server Side Processing
-## NAME: PYNAM VINODH
-## Reg no:212223240131
+## DATE:
 ## AIM:
 To design a website to find surface area of a Right Cylinder in server side.
 
@@ -115,31 +114,16 @@ def surfacearea(request):
         print('height=',h)
         area = 2 * 3.14 * int(r) * int(h) + 2 * 3.14 * int(r) * int(r)
         context['area'] = area
-        context['r'] = r
-        context['h'] = h
-        print('Area=',area)
-    return render(request,'mathapp/batcha.html',context)
-
-    urls.py
-
-    from django.contrib import admin
-from django.urls import path
-from mathapp import views
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('surfaceareaofcylinder/',views.surfacearea,name="surfaceareaofcylinder"),
-    path('',views.surfacearea,name="surfaceareaofcylinderroot")
-]
-```
-
 ## SERVER SIDE PROCESSING:
-![img](https://github.com/user-attachments/assets/31a94811-6cfc-43de-939f-d220cdc46a63)
+![374518251-31a94811-6cfc-43de-939f-d220cdc46a63](https://github.com/user-attachments/assets/f2ddd267-666e-45dc-9ffe-f928d60004a1)
+
 
 
 
 ## HOMEPAGE:
-![image](https://github.com/user-attachments/assets/fe82ca7d-b5ad-4b23-91d4-f7e8fec01953)
 
+
+![378222550-fe82ca7d-b5ad-4b23-91d4-f7e8fec01953](https://github.com/user-attachments/assets/7d443cb5-4616-4bf5-b713-88cc77888094)
 
 
 
