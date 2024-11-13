@@ -114,6 +114,22 @@ def surfacearea(request):
         print('height=',h)
         area = 2 * 3.14 * int(r) * int(h) + 2 * 3.14 * int(r) * int(r)
         context['area'] = area
+        context['r'] = r
+        context['h'] = h
+        print('Area=',area)
+    return render(request,'mathapp/batcha.html',context)
+
+    urls.py
+
+    from django.contrib import admin
+from django.urls import path
+from mathapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('surfaceareaofcylinder/',views.surfacearea,name="surfaceareaofcylinder"),
+    path('',views.surfacearea,name="surfaceareaofcylinderroot")
+]
+```
 ## SERVER SIDE PROCESSING:
 ![374518251-31a94811-6cfc-43de-939f-d220cdc46a63](https://github.com/user-attachments/assets/f2ddd267-666e-45dc-9ffe-f928d60004a1)
 
